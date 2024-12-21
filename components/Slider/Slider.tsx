@@ -10,14 +10,16 @@ const Slider = () => {
   const sliderData = [
     {
       id: 1,
-      image: "https://placehold.jp/300x500.png?text=Bhajan+1",
-      title: "Bhajan 1",
+      image:
+        "https://preview.redd.it/jai-shree-krishna-v0-01d1ov30perc1.jpeg?auto=webp&s=d24e9482494f1ddefa7b92b934e8ce1afd95e922",
+      title: "Shree Krishna Bhajan",
       artist: "Artist 1",
     },
     {
       id: 2,
-      image: "https://placehold.jp/300x500.png?text=Bhajan+2",
-      title: "Bhajan 2",
+      image:
+        "https://img.freepik.com/premium-photo/shree-ram-hindu-god-lord-shree-ram_789916-4065.jpg?w=350",
+      title: "Shree Ram Bhajan",
       artist: "Artist 2",
     },
     {

@@ -1,6 +1,6 @@
 import { Link, RelativePathString } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SearchBar } from "../../components/SearchBar";
 import Badges from "@/components/Badges";
 import SectionHeader from "@/components/SectionHeader";
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <SearchBar />
       <Badges />
       <SectionHeader
@@ -25,7 +25,7 @@ const HomeScreen = () => {
         linkText="Show all"
       />
       <Slider />
-    </View>
+    </ScrollView>
   );
 };
 
