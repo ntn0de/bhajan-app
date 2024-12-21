@@ -13,6 +13,12 @@ export default function RootLayout() {
             title: "Detail of user",
           }}
         />
+        <Stack.Screen
+          name="categories"
+          options={{
+            title: "Sub-categories",
+          }}
+        />
       </Stack>
     </>
   );

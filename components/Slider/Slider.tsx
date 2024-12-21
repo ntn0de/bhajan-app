@@ -5,6 +5,7 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from "react-native-reanimated";
+import { router } from "expo-router";
 
 const Slider = () => {
   const sliderData = [
@@ -41,12 +42,22 @@ const Slider = () => {
       scrollX.value = event.contentOffset.x;
     },
   });
+  const handlePress = (id: number) => {
+    console.log(id);
+    // navigate to details screen
+    router.push(`/categories/${id}`);
+  };
   return (
     <View style={styles.container}>
       <Animated.FlatList
         data={sliderData}
         renderItem={({ item, index }) => (
-          <SliderItem item={item} index={index} scrollX={scrollX} />
+          <SliderItem
+            item={item}
+            index={index}
+            scrollX={scrollX}
+            onPress={handlePress}
+          />
         )}
         horizontal
         showsHorizontalScrollIndicator={false}

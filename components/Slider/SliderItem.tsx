@@ -1,4 +1,10 @@
-import { Text, Image, StyleSheet, Dimensions } from "react-native";
+import {
+  Text,
+  Image,
+  StyleSheet,
+  Dimensions,
+  TouchableWithoutFeedback,
+} from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -13,10 +19,11 @@ type SliderItemProps = {
   item: any;
   index: number;
   scrollX: SharedValue<number>;
+  onPress: (id: number) => void;
 };
 
 const { width } = Dimensions.get("screen");
-const SliderItem = ({ item, index, scrollX }: SliderItemProps) => {
+const SliderItem = ({ item, index, scrollX, onPress }: SliderItemProps) => {
   const animatedStyle = useAnimatedStyle(() => {
     return {
       transform: [
@@ -41,15 +48,17 @@ const SliderItem = ({ item, index, scrollX }: SliderItemProps) => {
   });
 
   return (
-    <Animated.View style={[styles.itemContainer, animatedStyle]}>
-      <Image source={{ uri: item.image }} style={styles.image} />
-      <LinearGradient
-        colors={["transparent", "rgba(0,0,0,0.8)"]}
-        style={styles.background}
-      >
-        <Text>{item.title}</Text>
-      </LinearGradient>
-    </Animated.View>
+    <TouchableWithoutFeedback onPress={() => onPress(item.id)}>
+      <Animated.View style={[styles.itemContainer, animatedStyle]}>
+        <Image source={{ uri: item.image }} style={styles.image} />
+        <LinearGradient
+          colors={["transparent", "rgba(0,0,0,0.8)"]}
+          style={styles.background}
+        >
+          <Text>{item.title}</Text>
+        </LinearGradient>
+      </Animated.View>
+    </TouchableWithoutFeedback>
   );
 };
 
