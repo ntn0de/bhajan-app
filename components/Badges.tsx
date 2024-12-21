@@ -3,6 +3,18 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Badges = () => {
+  const badgeData = [
+    { key: "Devin" },
+    { key: "Dan" },
+    { key: "Dominic" },
+    { key: "Jackson" },
+    { key: "James" },
+    { key: "Joel" },
+    { key: "John" },
+    { key: "Jillian" },
+    { key: "Jimmy" },
+    { key: "Julie" },
+  ];
   return (
     <SafeAreaView style={styles.badges}>
       <FlatList
@@ -11,18 +23,7 @@ const Badges = () => {
         showsHorizontalScrollIndicator={false}
         snapToAlignment="center"
         decelerationRate={0.99}
-        data={[
-          { key: "Devin" },
-          { key: "Dan" },
-          { key: "Dominic" },
-          { key: "Jackson" },
-          { key: "James" },
-          { key: "Joel" },
-          { key: "John" },
-          { key: "Jillian" },
-          { key: "Jimmy" },
-          { key: "Julie" },
-        ]}
+        data={badgeData}
         renderItem={({ item }) => (
           <Text style={styles.badgeItem}>{item.key}</Text>
         )}
@@ -33,7 +34,7 @@ const Badges = () => {
 };
 const styles = StyleSheet.create({
   badges: {
-    marginTop: 10,
+    // paddingLeft: 10,
   },
 
   badgeItem: {

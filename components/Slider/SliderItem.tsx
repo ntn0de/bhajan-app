@@ -55,9 +55,10 @@ const SliderItem = ({ item, index, scrollX }: SliderItemProps) => {
 
 const styles = StyleSheet.create({
   itemContainer: {
-    alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     width: width,
+    marginRight: -12,
+    marginLeft: 10,
   },
   image: {
     width: 300,

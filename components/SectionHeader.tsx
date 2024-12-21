@@ -3,16 +3,11 @@ import React from "react";
 import { Link, RelativePathString } from "expo-router";
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#fff7f4",
-    flex: 1,
-    padding: 10,
-  },
   sectionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "baseline",
-    marginTop: 10,
+    padding: 10,
     fontSize: 24,
     fontWeight: "bold",
   },

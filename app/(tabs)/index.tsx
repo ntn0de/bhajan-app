@@ -8,9 +8,9 @@ import Slider from "../../components/Slider/Slider";
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: "column",
     backgroundColor: "#fff7f4",
     flex: 1,
-    padding: 10,
   },
 });
 
