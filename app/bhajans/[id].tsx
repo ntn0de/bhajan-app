@@ -5,9 +5,10 @@ import { router, useLocalSearchParams, useNavigation } from "expo-router";
 import { useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 
-export default function CategoriesScreen() {
+export default function BhajansScreen() {
   const { id } = useLocalSearchParams();
   const navigation = useNavigation();
+  console.log({ id }, "bhajans");
 
   const bhajans = getBhajans(+id);
   useEffect(() => {

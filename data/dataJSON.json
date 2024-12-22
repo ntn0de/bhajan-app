@@ -17,14 +17,16 @@
       "title": "Pranami Bhajan",
       "image": "https://placehold.jp/300x500.png?text=Bhajan+3",
       "artist": "Artist 3",
-      "mainCategoryId": 1
+      "mainCategoryId": 1,
+      "featured": true
     },
     {
       "id": 4,
       "title": "Nitya Path",
       "image": "https://placehold.jp/300x500.png?text=Bhajan+3",
       "artist": "Artist 4",
-      "mainCategoryId": 1
+      "mainCategoryId": 1,
+      "featured": true
     }
   ],
   "bhajans": [
@@ -59,9 +61,10 @@
     {
       "id": 3,
       "image": "https://placehold.jp/300x500.png?text=Bhajan+3",
-      "title": "Bhajan 3",
+      "title": "Vaishnav jan to tene kahiye",
       "artist": "Artist 3",
-      "categoryId": 3
+      "categoryId": 3,
+      "description": "Vaishnav jan to tene kahiye jay\n\nVaishnav jan to tene kahiye jay\n\npeerh paraaye janney ray\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye jay\n\npeerh paraaye janney ray\n\nVaishnav jan to tene kahiye jay\n\nPar dukkhey upkaar karey teeyey,\n\nPar dukkhey upkaar karey teeyey,\n\nman abhimaan na anney ray\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye\n\nSakal lokma sahuney bandhey, ji ji\n\nninda na karey kainee ray\n\nBaach kaachh, man nischal raakhey,\n\ndhan-dhan jananee tainee ray\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye\n\nSamdrishti nay trishna tyagee, ji ji\n\npar-stree jaynay maat ray\n\nVivihva thaki asatya na bole,\n\npar-dhan nav jhaley haath ray\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye\n\nMoh maaya vyaapey nahin jeynay, ji ji\n\ndridth vairagya jana manma ray\n\nRam-nam-shoom taalee laagee,\n\nsakal teerth seyna tanma ray\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye\n\nVanloobhee nay kapat rahit chhay, ji ji\n\nkaam, krodh nivarya ray\n\nBhane narsinhyo tainoo darshan\n\nkarta kul ekotair taarya re.\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye jay\n\npeerh paraaye janney ray\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye\n\nVaishnav jan to tene kahiye"
     },
     {
       "id": 4,

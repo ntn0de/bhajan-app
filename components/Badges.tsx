@@ -1,20 +1,11 @@
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { getCategories } from "@/data/categories";
+import { router } from "expo-router";
 
 const Badges = () => {
-  const badgeData = [
-    { key: "Devin" },
-    { key: "Dan" },
-    { key: "Dominic" },
-    { key: "Jackson" },
-    { key: "James" },
-    { key: "Joel" },
-    { key: "John" },
-    { key: "Jillian" },
-    { key: "Jimmy" },
-    { key: "Julie" },
-  ];
+  const badgeData = getCategories({ featured: true });
   return (
     <SafeAreaView style={styles.badges}>
       <FlatList
@@ -25,9 +16,14 @@ const Badges = () => {
         decelerationRate={0.99}
         data={badgeData}
         renderItem={({ item }) => (
-          <Text style={styles.badgeItem}>{item.key}</Text>
+          <Text
+            style={styles.badgeItem}
+            onPress={() => router.push(`/bhajans/${item.id}`)}
+          >
+            {item.title}
+          </Text>
         )}
-        keyExtractor={(item) => item.key}
+        keyExtractor={(item) => item.id.toString()}
       />
     </SafeAreaView>
   );

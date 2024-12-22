@@ -1,7 +1,12 @@
 import { categories } from "./dataJSON.json";
 
-function getCategories() {
-  return categories;
+// featured could be empty
+function getCategories({ featured }: { featured: boolean }) {
+  if (featured) {
+    return categories.filter((category) => category.featured);
+  } else {
+    return categories;
+  }
 }
 
 const getCategory = (id: number) => {
@@ -9,6 +14,7 @@ const getCategory = (id: number) => {
   const subCategories = categories.filter(
     (category) => category.mainCategoryId === id
   );
+  console.log({ id, subCategories });
   return subCategories;
 };
 

@@ -9,7 +9,7 @@ import { router } from "expo-router";
 import { getCategories } from "@/data/categories";
 
 const Slider = () => {
-  const sliderData = getCategories();
+  const sliderData = getCategories({ featured: false });
   const scrollX = useSharedValue(0);
   const scrollHandler = useAnimatedScrollHandler({
     onScroll: (event) => {
@@ -17,6 +17,7 @@ const Slider = () => {
     },
   });
   const handlePress = (id: number) => {
+    console.log(id, "hii");
     router.push(`/categories/${id}`);
   };
   return (

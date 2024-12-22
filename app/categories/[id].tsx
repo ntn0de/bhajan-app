@@ -8,13 +8,15 @@ export default function CategoriesScreen() {
   const { id } = useLocalSearchParams();
   const navigation = useNavigation();
   const categories = getCategory(+id);
+  console.log({ categories, id });
   useEffect(() => {
     if (categories.length === 0) {
-      router.replace(`./bhajans/${id}`);
+      console.log("redirecting");
+      router.replace(`/bhajans/${id}`);
     } else {
       navigation.setOptions({ title: "All Categories" });
     }
-  }, [categories, id]);
+  }, []);
   return (
     <View style={styles.container}>
       {categories.length > 0 && (
