@@ -25,7 +25,12 @@ const GenericList = ({
 
 const Tabitem = ({ item, dataType }: { item: any; dataType: string }) => {
   const onPress = (id: number) => {
-    const path = `/${dataType}/${id}` as RelativePathString;
+    let path;
+    if (dataType === "categories") {
+      path = `/bhajans/${id}` as RelativePathString;
+    } else {
+      path = `/bhajans/${item.categoryId}/${id}` as RelativePathString;
+    }
     router.push(path);
   };
   return (

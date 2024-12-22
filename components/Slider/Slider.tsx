@@ -17,8 +17,6 @@ const Slider = () => {
     },
   });
   const handlePress = (id: number) => {
-    console.log(id);
-    // navigate to details screen
     router.push(`/categories/${id}`);
   };
   return (

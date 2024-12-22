@@ -1,16 +1,18 @@
 import GenericList from "@/components/GenericList";
 import { getCategory } from "@/data/categories";
-import { router, useLocalSearchParams } from "expo-router";
+import { router, useLocalSearchParams, useNavigation } from "expo-router";
 import { useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 
 export default function CategoriesScreen() {
   const { id } = useLocalSearchParams();
-
+  const navigation = useNavigation();
   const categories = getCategory(+id);
   useEffect(() => {
     if (categories.length === 0) {
       router.replace(`./bhajans/${id}`);
+    } else {
+      navigation.setOptions({ title: "All Categories" });
     }
   }, [categories, id]);
   return (
