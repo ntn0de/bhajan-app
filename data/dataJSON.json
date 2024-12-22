@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Shree Krishna Bhajan",
+      "image": "https://preview.redd.it/jai-shree-krishna-v0-01d1ov30perc1.jpeg?auto=webp&s=d24e9482494f1ddefa7b92b934e8ce1afd95e922",
+      "artist": "Artist 1"
+    },
+    {
+      "id": 2,
+      "title": "Shree Ram Bhajan",
+      "image": "https://img.freepik.com/premium-photo/shree-ram-hindu-god-lord-shree-ram_789916-4065.jpg?w=350",
+      "artist": "Artist 2"
+    },
+    {
+      "id": 3,
+      "title": "Pranami Bhajan",
+      "image": "https://placehold.jp/300x500.png?text=Bhajan+3",
+      "artist": "Artist 3",
+      "mainCategoryId": 1
+    },
+    {
+      "id": 4,
+      "title": "Nitya Path",
+      "image": "https://placehold.jp/300x500.png?text=Bhajan+3",
+      "artist": "Artist 4",
+      "mainCategoryId": 1
+    }
+  ],
+  "bhajans": [
+    {
+      "id": 1,
+      "image": "https://preview.redd.it/jai-shree-krishna-v0-01d1ov30perc1.jpeg?auto=webp&s=d24e9482494f1ddefa7b92b934e8ce1afd95e922",
+      "title": "Shree Krishna Bhajan 1",
+      "artist": "Artist 1",
+      "categoryId": 1
+    },
+    {
+      "id": 1,
+      "image": "https://preview.redd.it/jai-shree-krishna-v0-01d1ov30perc1.jpeg?auto=webp&s=d24e9482494f1ddefa7b92b934e8ce1afd95e922",
+      "title": "Shree Krishna Bhajan 2",
+      "artist": "Artist 1",
+      "categoryId": 1
+    },
+    {
+      "id": 1,
+      "image": "https://preview.redd.it/jai-shree-krishna-v0-01d1ov30perc1.jpeg?auto=webp&s=d24e9482494f1ddefa7b92b934e8ce1afd95e922",
+      "title": "Shree Krishna Bhajan 3",
+      "artist": "Artist 1",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "image": "https://img.freepik.com/premium-photo/shree-ram-hindu-god-lord-shree-ram_789916-4065.jpg?w=350",
+      "title": "Shree Ram Bhajan",
+      "artist": "Artist 2",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "image": "https://placehold.jp/300x500.png?text=Bhajan+3",
+      "title": "Bhajan 3",
+      "artist": "Artist 3",
+      "categoryId": 3
+    },
+    {
+      "id": 4,
+      "image": "https://placehold.jp/300x500.png?text=Bhajan+4",
+      "title": "Bhajan 4",
+      "artist": "Artist 4",
+      "categoryId": 4
+    }
+  ]
+}

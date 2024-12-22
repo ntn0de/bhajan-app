@@ -8,15 +8,15 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="details"
-          options={{
-            title: "Detail of user",
-          }}
-        />
-        <Stack.Screen
           name="categories"
           options={{
             title: "Sub-categories",
+          }}
+        />
+        <Stack.Screen
+          name="bhajans"
+          options={{
+            title: "Bhajans",
           }}
         />
       </Stack>

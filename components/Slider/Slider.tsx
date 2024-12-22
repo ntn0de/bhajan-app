@@ -6,36 +6,10 @@ import Animated, {
   useSharedValue,
 } from "react-native-reanimated";
 import { router } from "expo-router";
+import { getCategories } from "@/data/categories";
 
 const Slider = () => {
-  const sliderData = [
-    {
-      id: 1,
-      image:
-        "https://preview.redd.it/jai-shree-krishna-v0-01d1ov30perc1.jpeg?auto=webp&s=d24e9482494f1ddefa7b92b934e8ce1afd95e922",
-      title: "Shree Krishna Bhajan",
-      artist: "Artist 1",
-    },
-    {
-      id: 2,
-      image:
-        "https://img.freepik.com/premium-photo/shree-ram-hindu-god-lord-shree-ram_789916-4065.jpg?w=350",
-      title: "Shree Ram Bhajan",
-      artist: "Artist 2",
-    },
-    {
-      id: 3,
-      image: "https://placehold.jp/300x500.png?text=Bhajan+3",
-      title: "Bhajan 3",
-      artist: "Artist 3",
-    },
-    {
-      id: 4,
-      image: "https://placehold.jp/300x500.png?text=Bhajan+4",
-      title: "Bhajan 4",
-      artist: "Artist 4",
-    },
-  ];
+  const sliderData = getCategories();
   const scrollX = useSharedValue(0);
   const scrollHandler = useAnimatedScrollHandler({
     onScroll: (event) => {
