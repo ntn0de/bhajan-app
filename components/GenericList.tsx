@@ -1,38 +1,44 @@
 import { View, Text, StyleSheet, FlatList, Pressable } from "react-native";
-import React from "react";
-import { Link, RelativePathString, router } from "expo-router";
+import React, { useCallback } from "react";
+import { router, RelativePathString } from "expo-router";
 
-const GenericList = ({
-  data,
-  dataType,
-}: {
-  data: Array<any>;
+interface GenericItem {
+  id: number;
+  title: string;
+  categoryId?: number;
+}
+
+interface GenericListProps {
+  data: Array<GenericItem>;
   dataType: string;
-}) => {
+}
+
+const GenericList: React.FC<GenericListProps> = ({ data, dataType }) => {
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={data}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <Tabitem item={item} key={item.id} dataType={dataType} />
-        )}
-        showsHorizontalScrollIndicator={false}
-      />
-    </View>
+    <FlatList
+      data={data}
+      keyExtractor={(item) => item.id.toString()}
+      renderItem={({ item }) => <Tabitem item={item} dataType={dataType} />}
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={styles.container}
+    />
   );
 };
 
-const Tabitem = ({ item, dataType }: { item: any; dataType: string }) => {
-  const onPress = (id: number) => {
-    let path;
-    if (dataType === "categories") {
-      path = `/bhajans/${id}` as RelativePathString;
-    } else {
-      path = `/bhajans/${item.categoryId}/${id}` as RelativePathString;
-    }
-    router.push(path);
-  };
+const Tabitem: React.FC<{ item: GenericItem; dataType: string }> = ({
+  item,
+  dataType,
+}) => {
+  const onPress = useCallback(
+    (id: number) => {
+      const path = `/bhajans/${
+        dataType === "categories" ? id : `${item.categoryId}/${id}`
+      }` as RelativePathString;
+      router.push(path);
+    },
+    [dataType, item.categoryId]
+  );
+
   return (
     <Pressable onPress={() => onPress(item.id)}>
       <Text style={styles.item}>{item.title}</Text>
@@ -44,22 +50,23 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     paddingEnd: 20,
-    // backgroundColor: "#f9f9f9",
     width: "100%",
   },
   item: {
     marginTop: 10,
-    marginRight: 10,
-    marginLeft: 10,
+    marginHorizontal: 10,
     padding: 10,
     fontSize: 16,
     textAlign: "left",
     borderWidth: 1,
-    // borderColor: "#ffe5d7",
-    boxShadow: "1 1 1px rgb(65, 57, 52)",
     borderColor: "#fe5c02",
     backgroundColor: "#ffffff",
     borderRadius: 40,
+    shadowColor: "#000",
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 1,
+    elevation: 2,
   },
 });
 

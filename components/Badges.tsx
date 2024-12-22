@@ -1,13 +1,11 @@
 import { View, Text, FlatList, StyleSheet } from "react-native";
-import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { getCategories } from "@/data/categories";
 import { router } from "expo-router";
 
 const Badges = () => {
   const badgeData = getCategories({ featured: true });
   return (
-    <SafeAreaView style={styles.badges}>
+    <View style={styles.badges}>
       <FlatList
         horizontal
         scrollEnabled
@@ -25,7 +23,7 @@ const Badges = () => {
         )}
         keyExtractor={(item) => item.id.toString()}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 const styles = StyleSheet.create({

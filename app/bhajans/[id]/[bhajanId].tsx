@@ -18,8 +18,9 @@ const BhajanDetailPage = () => {
   return (
     <ScrollView>
       <View style={styles.container}>
-        {/* <Text style={styles.title}>{bhajan.title}</Text> */}
-        <Text style={styles.description}>{bhajan.description}</Text>
+        {bhajan != undefined && (
+          <Text style={styles.description}>{bhajan.description}</Text>
+        )}
       </View>
     </ScrollView>
   );

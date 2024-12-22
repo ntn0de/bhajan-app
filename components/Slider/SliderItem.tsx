@@ -55,7 +55,7 @@ const SliderItem = ({ item, index, scrollX, onPress }: SliderItemProps) => {
           colors={["transparent", "rgba(0,0,0,0.8)"]}
           style={styles.background}
         >
-          <Text>{item.title}</Text>
+          <Text style={styles.title}>{item.title}</Text>
         </LinearGradient>
       </Animated.View>
     </TouchableWithoutFeedback>
@@ -68,6 +68,14 @@ const styles = StyleSheet.create({
     width: width,
     marginRight: -12,
     marginLeft: 10,
+  },
+  title: {
+    position: "absolute",
+    fontSize: 24,
+    color: "white",
+    fontWeight: "bold",
+    padding: 20,
+    bottom: 0,
   },
   image: {
     width: 300,
